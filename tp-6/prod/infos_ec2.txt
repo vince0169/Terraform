@@ -1,0 +1,1 @@
+PUBLIC IP: 100.24.75.127 ; ID: i-01e064a1f1a2b8fb3 ; AZ: us-east-1a; 
