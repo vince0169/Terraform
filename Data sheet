@@ -1,0 +1,20 @@
+Here are the most common commands to deploy and destroy a resource with terraform:
+
+
+$ terraform init
+==> In order to prepare the working directory for use with Terraform, the terraform init command performs the following steps:
+Backend Initialization
+Child Module Installation
+Plugin Installation
+
+
+$ terraform plan
+==> This command creates an execution plan, which lets us preview the changes that Terraform plans to make to our infrastructure. 
+
+
+$ terraform apply
+==> This command executes the actions proposed in a terraform plan . It is used to deploy the infrastructure
+
+
+$ terraform destroy
+==> This command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.
