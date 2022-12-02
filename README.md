@@ -6,7 +6,7 @@
 
 ## :file_folder: TP2 :file_folder:
 
-The goal of this exercise is to create a virtual machine in AWS in the us-east-1 region with the following Centos7 image: ami-00e87074e52e6c9f9.
+The goal of this exercise is to deploy a virtual machine in AWS in the us-east-1 region with the following Centos7 image: ami-00e87074e52e6c9f9.
 We will first need to retrieve our acces key and secret key from our account and create an EC2 key pair (called devops-vincent).
 Finally we will add a tag "ec2-vincent" to our instance, .
 
@@ -14,8 +14,8 @@ The code to achieve the goal is put in the ec2.tf file
 
 ## :file_folder: TP3 :file_folder:
 
-We create an ec2 instance with a public ip and a security group (we open ports 80 and 443).
-Our ec2 will have a variabilized size (the default value is t2.nano) and a variabilized tag (ec2-vincent). Theses informations are in the variables.tf file.
+We deploy an ec2 instance with a public ip and a security group (we open ports 80 and 443).
+Our ec2 deployment will be dynamic, we will have a variabilized size (the default value is t2.nano) and a variabilized tag (ec2-vincent). Theses informations are in the variables.tf file.
 Finally, we will override in the terraform.tfvars file, the value of the size of the instance (t2.micro)
 
 ## :file_folder: TP4 :file_folder:
