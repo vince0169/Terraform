@@ -4,7 +4,7 @@
 
 ## This repository contains the projects and exercises that I was able to perform on Terraform during my training at Eazytraining
 
-## :file_folder: TP2 :file_folder: - deployment
+## :file_folder: TP2 - deployment :file_folder: 
 
 The goal of this exercise is to deploy a virtual machine in AWS in the us-east-1 region with the following Centos7 image: ami-00e87074e52e6c9f9.
 We will first need to retrieve our acces key and secret key from our account and create an EC2 key pair (called devops-vincent).
@@ -12,13 +12,13 @@ Finally we will add a tag "ec2-vincent" to our instance, .
 
 The code to achieve the goal is put in the ec2.tf file
 
-## :file_folder: TP3 :file_folder:
+## :file_folder: TP3 - dynamic deployment :file_folder:
 
 We deploy an ec2 instance with a public ip and a security group (we open ports 80 and 443).
 Our ec2 deployment will be dynamic, we will have a variabilized size (the default value is t2.nano) and a variabilized tag (ec2-vincent). Theses informations are in the variables.tf file.
 Finally, we will override in the terraform.tfvars file, the value of the size of the instance (t2.micro)
 
-## :file_folder: TP4 :file_folder:
+## :file_folder: TP4 - provisioners :file_folder:
 
 We get the ec2.tf file from TP3 and modify it to install nginx on our VM.
 We will need to modify our security group to allow ingress ssh traffic and egress traffic.
@@ -26,11 +26,11 @@ Also we will get the ip, id and availability zone of our VM that we will put in 
 in this exercise, we use local and remote terraform provisioners.
 
 
-## :file_folder: TP5 :file_folder:
+## :file_folder: TP5 - remote backend :file_folder:
 
 From TP4, we will modify our ec2.tf file to make an AWS remote S3 with a bucket called terraform-backend-vincent, in order to store the tfstate file.
 
-## :file_folder: TP6 :file_folder:
+## :file_folder: TP6 - module :file_folder:
 
 We create a module "ec2module" in order to deploy our instance in the same way we do before (with a public ip and a security group).
 Then, we will create 2 repositories ("prod" and "dev") each with a main.tf file using the ec2module created before.
