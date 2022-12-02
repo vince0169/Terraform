@@ -4,7 +4,7 @@
 
 ## This repository contains the projects and exercises that I was able to perform on Terraform during my training at Eazytraining
 
-## :file_folder: TP2 :file_folder:
+## :file_folder: TP2 :file_folder: - deployment
 
 The goal of this exercise is to deploy a virtual machine in AWS in the us-east-1 region with the following Centos7 image: ami-00e87074e52e6c9f9.
 We will first need to retrieve our acces key and secret key from our account and create an EC2 key pair (called devops-vincent).
